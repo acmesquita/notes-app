@@ -1,13 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Types } from '../../store/reducer';
+import { Types } from '../../store/reducer/example-reducer';
 
 export default function ComponentList() {
 
   const qty = 20
 
   const list = useSelector(
-      state => state.data.slice(0, qty)
+      state => state.exampleReducer.data.slice(0, qty)
     , [qty]);
   const dispatch = useDispatch();
 
