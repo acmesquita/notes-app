@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Types } from '../../store/reducer';
 
 export default function ComponentList() {
 
@@ -11,7 +12,7 @@ export default function ComponentList() {
   const dispatch = useDispatch();
 
   function add(){
-    dispatch({ type: 'ADD_REDUCER', title: 'GrafQL'})
+    dispatch({ type: Types.ADD, title: 'GrafQL'})
   }
 
   return (
