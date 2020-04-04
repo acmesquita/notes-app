@@ -1,8 +1,8 @@
 .content-add {
   width: 100%;
-  margin: 10px;
+  margin: 50px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -11,11 +11,45 @@
   font-size: 18px;
   border-radius: 3px;
   border: 1px solid #ccc;
+  resize: vertical;
+  overflow: auto;
 }
 
-.content-add button {
+.content-add .actions button {
   padding: 10px;
   margin: 10px;
+
+  border: none;
+  font-size: 24px;
+  color: #434343;
+
+  cursor: pointer;
+}
+
+.color-success {
+  color: #008002 !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: 100%;
+}
+
+.preview {
+  border: 1px solid #cccccc;
+  min-height: 235px;
+  height: auto;
+  width: 65%;
+  margin-left: 0;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.hide {
+  display: none;
 }
 
 .content-list {
