@@ -10,15 +10,21 @@ export const { Types, Creators } = createActions({
 })
 
 const INITIAL_STATE = {
-  data: []
+  data: JSON.parse(localStorage.getItem('list')) || []
 }
 
 const add = (state = INITIAL_STATE, action) => {
-  return { ...state, data: [...state.data, action.note] }
+  let newData = [...state.data, action.note]
+  localStorage.clear()
+  localStorage.setItem('list', JSON.stringify(newData))
+  return { ...state, data: newData }
 }
 
 const remove = (state = INITIAL_STATE, action) => {
-  return { ...state, data: state.data.filter(note => note.id !== action.id) }
+  let newData = state.data.filter(note => note.id !== action.id)
+  localStorage.clear()
+  localStorage.setItem('list', JSON.stringify(newData))
+  return { ...state, data: newData }
 }
 
 /**
