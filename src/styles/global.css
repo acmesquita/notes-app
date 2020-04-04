@@ -19,3 +19,8 @@ body {
 ul {
   list-style: none;
 }
+
+li, ol {
+  padding-left: 10px;
+  line-height: 24px;
+}

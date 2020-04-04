@@ -59,12 +59,12 @@
   flex-direction: column;
 }
 
-ul {
+.list {
   width: 80%;
   padding: 30px;
 }
 
-ul li {
+.list .item {
   margin: 20px;
   padding: 20px;
   min-height: 200px;

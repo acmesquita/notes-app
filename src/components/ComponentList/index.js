@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import marked from 'marked';
 import { sanitize } from 'dompurify';
-import { MdDone, MdDvr, MdEdit } from 'react-icons/md';
+import { MdDone, MdVisibility, MdCode } from 'react-icons/md';
 
 import { Types } from '../../store/reducer/example-reducer';
 
@@ -75,13 +75,13 @@ export default function ComponentList() {
             <MdDone width={24} />
           </button>
           <button type="button" onClick={preview}>
-            {hide() ? <MdDvr width={24} /> : <MdEdit width={24} />}
+            {hide() ? <MdVisibility width={24} /> : <MdCode width={24} />}
           </button>
         </div>
       </div>
       <div className="content-list">
-        <ul>
-          {list.map(item => <li key={item.id}><ItemList item={item} /> </li>)}
+        <ul className="list">
+          {list.map(item => <li className="item" key={item.id}><ItemList item={item} /> </li>)}
         </ul>
       </div>
     </>
