@@ -9,6 +9,8 @@
 .content-add textarea {
   padding: 10px;
   font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 }
 
 .content-add button {
@@ -16,23 +18,34 @@
   margin: 10px;
 }
 
-ul {
-  width: 100%;
-  margin: 30px;
+.content-list {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-ul li {
-  margin: 10px;
+ul {
+  width: 80%;
   padding: 30px;
-  height: 30px;
+}
+
+ul li {
+  margin: 20px;
+  padding: 20px;
+  min-height: 200px;
+  height: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  list-style: none;
+  
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(209,209,209,1);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(209,209,209,1);
+  box-shadow: 0px 0px 7px 1px rgba(209,209,209,1);
+  
+  border-radius: 3px;
 
-  border: 1px solid #717180;
-  border-radius: 8px;
+  position: relative;
 }

@@ -13,10 +13,14 @@ export default function ItemList({ item }) {
   }
 
   return (
-    <span>
-      <div>{item.text}</div>
-      <small>{item.createAt}</small>
-      <button type="button" onClick={remove} className="trach">DEL</button>
-    </span>
+    <div className="content-wrapper">
+      <div className="head">
+        <button type="button" onClick={remove} className="trach">x</button>
+      </div>
+      <div className="content" dangerouslySetInnerHTML={{ __html: item.text }} />
+      <div className="footer">
+        <small>Criado em: {item.createAt}</small>
+      </div>
+    </div>
   );
 }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import marked from 'marked';
+import { sanitize } from 'dompurify'
 import { Types } from '../../store/reducer/example-reducer';
 
 import Note from '../../models/Note';
@@ -18,9 +20,12 @@ export default function ComponentList() {
   const dispatch = useDispatch();
 
   function add() {
-    let note = new Note(text)
-    dispatch({ type: Types.ADD, note })
-    setText('')
+    if (text.length > 0) {
+      let mdText = sanitize(marked.parse(text))
+      let note = new Note(mdText)
+      dispatch({ type: Types.ADD, note })
+      setText('')
+    }
   }
 
   return (
@@ -31,12 +36,15 @@ export default function ComponentList() {
           rows={10}
           value={text}
           onChange={e => setText(e.target.value)}
+          placeholder="Digite sua nota"
         />
         <button type="button" onClick={add}>ADD</button>
       </div>
-      <ul>
-        {list.map(item => <li key={item.id}><ItemList item={item} /> </li>)}
-      </ul>
+      <div className="content-list">
+        <ul>
+          {list.map(item => <li key={item.id}><ItemList item={item} /> </li>)}
+        </ul>
+      </div>
     </>
   );
 }
