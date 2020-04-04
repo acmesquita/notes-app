@@ -1,50 +1,20 @@
-# Template React Redux com Hooks
+# Notes App
 
-Template para criação de projetos em React com Redux, utilizando os hooks. Além do padrão Duck Pattern e Redux Sauce para organização e otimização na construção dos reduces e actions.
+Projeto criado como desafio [Notes APP](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Notes-App.md).
 
-### Utilizar
+## Requisitos
 
-#### 1º Baixar template
+- [x] O usuário pode criar uma nota
+- [x] O usuário pode editar uma nota
+- [x] O usuário pode deletar uma nota
+- [x] Ao fechar a janela do navegador, as notas serão armazenadas e, quando o Usuário retornar, os dados serão recuperados
 
-```
-  git clone https://github.com/acmesquita/template-react-redux-hooks.git nome_do_projeto
-```
+## Bônus
 
-#### 2º Renomear projeto
+-  [x] O usuário pode criar e editar uma anotação no formato Markdown. Ao salvar, ele converterá o Markdown em HTML
+-  [x] O usuário pode ver a data em que criou a nota
 
-<i>package.json</i>
-```
-  {
-    "name": "nome_do_projeto"
-  }
-```
+## Deafios pessoais
 
-#### 3º Comente ou remova o exemplo
-
-<i>src/store/reducer/index.js</i>
-
-```
-  import { combineReducers } from 'redux';
-
-  // import exampleReducer from './example-reducer'
-
-  export default combineReducers({
-    // exampleReducer,
-  })
-```
-
-ou
-
-```
-  import { combineReducers } from 'redux';
-
-  export default combineReducers({
-
-  })
-```
-
-#### Pronto!!!
-
-O projeto já estará pronto para a criação do seu projeto completamente configurado e seguindo as melhores práticas!
-
-Aproveite e vamos codar!
+-  [x] Estilização dos componentes
+-  [X] Pré-visualização da nota
