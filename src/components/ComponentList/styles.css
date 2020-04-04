@@ -1,0 +1,38 @@
+.content-add {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-add textarea {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.content-add button {
+  padding: 10px;
+  margin: 10px;
+}
+
+ul {
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ul li {
+  margin: 10px;
+  padding: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #717180;
+  border-radius: 8px;
+}

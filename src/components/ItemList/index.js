@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Types } from '../../store/reducer/example-reducer';
-// import { Container } from './styles';
+import './styles.css';
 
 export default function ItemList({ item }) {
 
@@ -14,8 +14,9 @@ export default function ItemList({ item }) {
 
   return (
     <span>
-      {item.text} - {item.createAt}
-      <button type="button" onClick={remove}>DELETE</button>
+      <div>{item.text}</div>
+      <small>{item.createAt}</small>
+      <button type="button" onClick={remove} className="trach">DEL</button>
     </span>
   );
 }

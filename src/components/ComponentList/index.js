@@ -5,6 +5,8 @@ import { Types } from '../../store/reducer/example-reducer';
 import Note from '../../models/Note';
 import ItemList from '../ItemList'
 
+import './styles.css'
+
 export default function ComponentList() {
 
   const qty = 20
@@ -23,13 +25,15 @@ export default function ComponentList() {
 
   return (
     <>
-      <textarea
-        cols={100}
-        rows={10}
-        value={text}
-        onChange={e => setText(e.target.value)}
-      />
-      <button type="button" onClick={add}>ADD</button>
+      <div className="content-add">
+        <textarea
+          cols={100}
+          rows={10}
+          value={text}
+          onChange={e => setText(e.target.value)}
+        />
+        <button type="button" onClick={add}>ADD</button>
+      </div>
       <ul>
         {list.map(item => <li key={item.id}><ItemList item={item} /> </li>)}
       </ul>
