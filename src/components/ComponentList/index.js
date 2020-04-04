@@ -24,8 +24,7 @@ export default function ComponentList() {
 
   function add() {
     if (text.length > 0) {
-      let mdText = sanitize(marked.parse(text))
-      let note = new Note(mdText)
+      let note = new Note(text)
       dispatch({ type: Types.ADD, note })
       setText('')
       setPreviewText('')
@@ -67,6 +66,7 @@ export default function ComponentList() {
             value={text}
             onChange={e => setText(e.target.value)}
             placeholder="Digite sua nota"
+            className="textarea"
           />
         </div>
         <div className={`preview ${hide()}`} dangerouslySetInnerHTML={{ __html: previewText }} />
