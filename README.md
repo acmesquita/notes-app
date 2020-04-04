@@ -2,6 +2,8 @@
 
 Projeto criado como desafio [Notes APP](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Notes-App.md).
 
+Acesse a [Demo](https://cath-notes-app.netlify.com/)
+
 ## Requisitos
 
 - [x] O usuário pode criar uma nota
