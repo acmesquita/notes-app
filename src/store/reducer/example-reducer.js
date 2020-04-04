@@ -5,7 +5,7 @@ import { createActions, createReducer } from 'reduxsauce';
  *  Ex.: Type.ADD e add = { type: Type.ADD, params }
  */
 export const { Types, Creators } = createActions({
-  add: ["title"]
+  add: ["note"]
 })
 
 const INITIAL_STATE = {
@@ -13,7 +13,7 @@ const INITIAL_STATE = {
 }
 
 const add = (state = INITIAL_STATE, action) => {
-  return { ...state, data: [...state.data, action.title] }
+  return { ...state, data: [...state.data, action.note] }
 }
 
 /**

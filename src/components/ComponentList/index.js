@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Types } from '../../store/reducer/example-reducer';
 
+import Note from '../../models/Note';
+import ItemList from '../ItemList'
+
 export default function ComponentList() {
 
   const qty = 20
@@ -13,7 +16,9 @@ export default function ComponentList() {
   const dispatch = useDispatch();
 
   function add() {
-    dispatch({ type: Types.ADD, title: text })
+    let note = new Note(text)
+    dispatch({ type: Types.ADD, note })
+    setText('')
   }
 
   return (
@@ -26,7 +31,7 @@ export default function ComponentList() {
       />
       <button type="button" onClick={add}>ADD</button>
       <ul>
-        {list.map(item => <li key={item}>{item}</li>)}
+        {list.map(item => <li key={item.id}><ItemList item={item} /> </li>)}
       </ul>
     </>
   );
