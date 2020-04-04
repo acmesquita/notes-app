@@ -9,15 +9,11 @@ export const { Types, Creators } = createActions({
 })
 
 const INITIAL_STATE = {
-  data: [
-    'React Native',
-    'ReactJS',
-    'NodeJS'
-  ]
+  data: []
 }
 
 const add = (state = INITIAL_STATE, action) => {
-  return { ...state, data: [ ...state.data, action.title ]}
+  return { ...state, data: [...state.data, action.title] }
 }
 
 /**
