@@ -16,7 +16,7 @@ Acesse a [Demo](https://cath-notes-app.netlify.com/)
 -  [x] O usuário pode criar e editar uma anotação no formato Markdown. Ao salvar, ele converterá o Markdown em HTML
 -  [x] O usuário pode ver a data em que criou a nota
 
-## Deafios pessoais
+## Desafios pessoais
 
 -  [x] Estilização dos componentes
 -  [X] Pré-visualização da nota
